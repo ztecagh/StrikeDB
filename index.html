@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STRIKE//DB — Boxing &amp; Kickboxing Technique Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #000; overflow: hidden; cursor: crosshair;
+  }
+  canvas { display: block; }
+  ::selection { background: #00eaff; color: #000; }
+
+  #search {
+    position: absolute;
+    background: #000;
+    border: 1px solid #162424;
+    color: #e6f7f7;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    padding: 0 40px 0 38px;
+    outline: none;
+    box-sizing: border-box;
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300eaff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    background-size: 15px 15px;
+    transition: border-color 120ms;
+  }
+  #search::placeholder { color: #3f4f4f; letter-spacing: 0.6px; }
+  #search:focus { border-color: #00eaff; box-shadow: 0 0 14px rgba(0,234,255,0.18); }
+
+  #clear {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    color: #7d9191;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 11;
+    padding: 0;
+    display: none;
+    line-height: 1;
+  }
+  #clear:hover { color: #00eaff; }
+  #clear.on { display: block; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+</head>
+<body>
+<input id="search" type="text" placeholder="SEARCH TECHNIQUE, FIGHTER, CATEGORY..." autocomplete="off" spellcheck="false">
+<button id="clear" aria-label="Clear search">×</button>
+<script src="sketch.js"></script>
+</body>
+</html>
